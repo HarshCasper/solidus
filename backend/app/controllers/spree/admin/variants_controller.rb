@@ -21,7 +21,7 @@ module Spree
 
       def collection
         if params[:deleted] == "on"
-          base_variant_scope ||= super.with_discarded
+          base_variant_scope = super.with_discarded
         else
           base_variant_scope ||= super
         end
